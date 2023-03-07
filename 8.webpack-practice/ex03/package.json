@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --progress",
-    "build": "npx webpack ./src/index.js -o ./public"
+    "build": "npx webpack"
   },
   "keywords": [],
   "author": "",
