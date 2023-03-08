@@ -2,11 +2,25 @@ import React from 'react';
 import FoodListItem from './FoodListItem';
 
 function FoodList({foods}) {
+    // const foodItems = [];
+    // foods.forEach(function(food){
+    //     foodItems.push(<FoodListItem name={food.name} count={food.count} />)
+    // });
+
+    // const a1 = [1, 2, 3, 4];
+    // const a2 = a1.map(function(e){
+    //     return e*e;
+    // });
+
+    // const a3 = )
+    // console.log(a3);
+
     return (
         <ul>
-            <FoodListItem name='Bread' count='10' />
-            <FoodListItem name='Egg' count='20' />
-            <FoodListItem name='Milk' count='5' />
+            {foods.map((food) => <FoodListItem 
+                                    key={food.no}
+                                    name={food.name} 
+                                    count={food.count} />)}
         </ul>
     );
 }
