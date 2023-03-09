@@ -1,14 +1,16 @@
 import React from 'react';
-import styles from './assets/css/App.css';
+import './assets/css/App.css';
 import Emaillist from './Emaillist';
+import RegisterForm from './RegisterForm';
+import Searchbar from './Searchbar';
+import emails from './assets/json/data.json';
 
 function App(props) {
     return (
         <div id='App'>
-            <div className={styles.Searchbar}>
-                찾기: <input type='text' placeholder='search'/>
-            </div>
-            <Emaillist />
+            <RegisterForm />
+            <Searchbar />
+            <Emaillist emails={emails} />
         </div>
     );
 }
