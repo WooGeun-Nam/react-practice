@@ -11,7 +11,5 @@ ex05: Component Lifecycle
 ex06: Immutability(불변성) of Component's State
 
 emaillist07
-guestbook07
-gallery07
-mysite07
+mysite07 ( guestbook, gallery )
 kanbanboard
