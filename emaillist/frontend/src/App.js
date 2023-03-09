@@ -1,9 +1,14 @@
 import React from 'react';
+import styles from './assets/css/App.css';
+import Emaillist from './Emaillist';
 
 function App(props) {
     return (
         <div id='App'>
-            <h1>Emaillist</h1>
+            <div className={styles.Searchbar}>
+                찾기: <input type='text' placeholder='search'/>
+            </div>
+            <Emaillist />
         </div>
     );
 }
