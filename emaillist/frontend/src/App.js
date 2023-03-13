@@ -10,8 +10,7 @@ function App(props) {
 
     const notifyKeyWordChanges = function(keyword) {
         // keyword가 firstName or lastName or email
-        const emails = data.filter(email => email.firstName.includes(keyword) || email.lastName.includes(keyword) || email.email.includes(keyword) || 
-                                        (email.firstName+email.lastName).includes(keyword))
+        const emails = data.filter(email => email.email.includes(keyword) || (email.firstName+email.lastName).includes(keyword))
         setEmails(emails);
     }
 
