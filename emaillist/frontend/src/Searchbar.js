@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './assets/css/Searchbar.css';
 
-const Searchbar = () => {
+const Searchbar = ({callback}) => {
     return (
         <div className={styles.Searchbar}>
-            <input type='text' placeholder='찾기'/>
+            <input 
+                type='text' 
+                placeholder='찾기'/>
         </div>
     );
 };
