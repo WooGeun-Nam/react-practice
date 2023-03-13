@@ -8,8 +8,8 @@ const Emaillist = ({emails}) => {
             {
                 emails.map(email => <Email 
                                         key={email.no}
-                                        no={email.no}
-                                        name={email.firstName + email.lastName}
+                                        firstName={email.firstName}
+                                        lastName={email.lastName}
                                         email={email.email}/>) 
             }
         </ul>
