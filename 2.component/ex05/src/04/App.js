@@ -10,15 +10,17 @@ export default function App() {
     useEffect(() => {
         var timeID = setInterval(() => {
             setTime(new Date());
+            setTicks((ticks) => ticks + 1);
         }, 1000)
         return (function(){
             clearInterval(timeID);
         });
     }, []);
 
+    /*
     useEffect(() => {
         setTicks(ticks+1);
-    }, [time]);
+    }, [time]); */
 
     return (
         <div>
