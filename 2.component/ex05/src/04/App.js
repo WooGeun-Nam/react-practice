@@ -10,15 +10,18 @@ export default function App() {
     useEffect(() => {
         var timeID = setInterval(() => {
             setTime(new Date());
-            setTicks((ticks) => ticks + 1);
+            // 범위 문제
+            // setTicks(ticks + 1); 는 불가능 -> 자신의 범위를 유지 closure의 특징
+            // closure가 되면서 엉킨?다?
+            // 이 함수들은 생성될 당시의 환경을 기억 합니다.
+            setTicks((t) => t + 1);
         }, 1000)
         return (function(){
             clearInterval(timeID);
         });
     }, []);
 
-    /*
-    useEffect(() => {
+    /* useEffect(() => {
         setTicks(ticks+1);
     }, [time]); */
 
