@@ -2,10 +2,9 @@ import React, {useState, useEffect} from 'react';
 import styles from './assets/css/KanbanBoard.css';
 import CardList from './CardList';
 import update from 'react-addons-update';
-import data from './assets/json/data.json';
 
 const KanbanBoard = () => {
-    const [cards, setCards] = useState(data);
+    const [cards, setCards] = useState([]);
 
     const fetchCards = async () => {
         try {
