@@ -14,7 +14,7 @@ export default function App() {
             // setTicks(ticks + 1); 는 불가능 -> 자신의 범위를 유지 closure의 특징
             // closure가 되면서 엉킨?다?
             // 이 함수들은 생성될 당시의 환경을 기억 합니다.
-            setTicks((t) => t + 1);
+            setTicks(t => t + 1);
         }, 1000)
         return (function(){
             clearInterval(timeID);
