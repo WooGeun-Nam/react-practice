@@ -11,10 +11,6 @@ react-practice - 3.routing
 07. Nesting Routes
 08. useRoute
 
-
-
-
-
 ==============================================================================================
 
 1. 설치
@@ -28,4 +24,3 @@ react-practice - 3.routing
 4. npm 스크립팅
 5. 테스트 서버 실행
    $ npm run debug src=(01|02|03|04)
-
