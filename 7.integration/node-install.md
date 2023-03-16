@@ -1,10 +1,15 @@
 01. Node.js
 ## yum 설치
    ```bash
-
   # curl -sL https://rpm.nodesource.com/setup_18.x | sudo -E bash -
   # yum install -y nodejs
   ```
+
+## dnf 설치
+    ```bash
+    # curl -sL https://rpm.nodesource.com/setup_18.x | sudo -E bash -
+    # sudo dnf remove nodejs -y && sudo dnf install nodejs 
+    ```
 
 ## 컴파일 설치
  특정 버젼의 Node 애플리케이션만 운용하는 서버 환경이라면 특정 버젼의 Node만 소스 컴파일 설치하고 애플리케이션을 운용하면 베스트 일 것이다. Linux(CentOS) 에서 Node를 소스 컴파일 설치를 한다. 설치를 위해서는 Python3(정확히, 공유 라이브러리)가 설치되어 있어야 한다. [Python3 리눅스 설치 및 설정]을 참고해서 설치한다. 그리고 V8 엔진 컴파일을 위해 g++ 7.x 버젼이 필요하다. CentOS RPM 설치는 4.x까지 지원하기 때문에 별도 설치 및 설정을 해 주어야 한다.
