@@ -1,11 +1,11 @@
 {
-  "name": "ex05",
+  "name": "3.routing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development --env",
-    "start": "npx webpack --config config/webpack.config.js --mode production"
+    "build": "npx webpack --config config/webpack.config.js --mode production"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^9.1.2",
+    "babel-plugin-styled-components": "^2.0.7",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "css-loader": "^6.7.3",
     "node-sass": "^8.0.0",
@@ -26,6 +27,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "jqeury": "^0.0.1-security",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
