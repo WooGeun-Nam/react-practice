@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styles from './assets/css/KanbanBoard.css';
 import CardList from './CardList';
-import update from 'react-addons-update';
 
 const KanbanBoard = () => {
     const [cards, setCards] = useState([]);
@@ -21,17 +20,16 @@ const KanbanBoard = () => {
 
             const json = await response.json();
             if(json.result !== 'success') {
-                throw new Error(`${json.response} ${json.message}`)
-            };
+                throw new Error(`${json.result} ${json.message}`)
+            }
 
             setCards(json.data);
-
         } catch(err) {
-            console.error(err.message);
+            console.log(err.message);
         }
     }
 
-    useEffect(() => {
+    useEffect(()=>{
         fetchCards();
     }, []);
 
@@ -41,11 +39,11 @@ const KanbanBoard = () => {
                 key={'To Do'}
                 title={'To Do'}
                 cards={cards.filter(card => card.status === 'ToDo')}/>
-            <CardList 
+            <CardList
                 key={'Doing'}
                 title={'Doing'}
                 cards={cards.filter(card => card.status === 'Doing')}/>
-            <CardList 
+            <CardList
                 key={'Done'}
                 title={'Done'}
                 cards={cards.filter(card => card.status === 'Done')}/>

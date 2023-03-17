@@ -1,26 +1,30 @@
-import React from 'react';
-import styles from './assets/css/TaskList.css'
+import React, {useState} from 'react';
 import Task from './Task';
+import styles from './assets/css/TaskList.css';
 
-const TaskList = ({cardNo, tasks, callbackAddTask, callbackChangeTaskDone}) => {
+const TaskList = ({tasks, callbackAddTask, callbackChangeTaskDone}) => {
 
     return (
         <div>
             <ul>
                 {
-                    tasks.map(task => <Task 
+                    tasks.map(task => <Task
                                         key={task.no}
-                                        no={task.no}
+                                        no={task.no}                                        
                                         name={task.name}
                                         done={task.done}
-                                        callbackChangeTaskDone={callbackChangeTaskDone}/>) 
+                                        callbackChangeTaskDone={callbackChangeTaskDone}/>)
                 }
             </ul>
-            <input type='text' placeholder={'태스크 추가'} className={styles.TaskList__add_task} onKeyDown={(e) => {
-                if(e.key === 'Enter') {
-                    callbackAddTask(e.target.value);
-                }
-            }}/>
+            <input
+                type='text'
+                placeholder={'태스크 추가'}
+                className={styles.TaskList__add_task}
+                onKeyDown={(e) => {
+                    if(e.key === 'Enter') {
+                        callbackAddTask(e.target.value);        
+                    }
+                }}/>
         </div>
     );
 };

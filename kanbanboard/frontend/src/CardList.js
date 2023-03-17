@@ -7,7 +7,7 @@ const CardList = ({title, cards}) => {
         <div className={styles.CardList}>
             <h1>{title}</h1>
             {
-                cards.map(card => <Card 
+                cards.map(card => <Card
                                     key={card.no}
                                     no={card.no}
                                     title={card.title}
