@@ -37,7 +37,7 @@
     # wget https://nodejs.org/dist/v18.14.1/node-v18.14.1.tar.gz
     # tar xvfz node-v18.14.1.tar.gz
     # ./configure --prefix=/usr/local/dozuone2023/node-v18.14.1
-    # make & make install
+    # make && make install
     ```
 
 3.	링크 작업
