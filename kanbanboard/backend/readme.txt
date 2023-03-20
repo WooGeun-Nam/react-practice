@@ -30,8 +30,11 @@
 		
 	4) 연결 테스트
 		# ssh -i mykey.pem root@192.168.64.3
+	
+	5) ssh 연결 환경설정
 		
-	5) jenkins
+		
+	6) jenkins
 		- Publish over SSH 플러그인 설치
 			-> jenkins plugin : Publish Over SSH
 		- Publish over SSH 플러그인 ssh server 등록(springboot-publish-server)
