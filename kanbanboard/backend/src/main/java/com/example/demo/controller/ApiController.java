@@ -28,6 +28,13 @@ public class ApiController {
 	@Autowired
 	private TaskRepository taskRepository;
 
+	@GetMapping("/hello")
+	public ResponseEntity<JsonResult> hello() {
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(JsonResult.success("hello~~~~"));
+	}
+	
 	@GetMapping("/card")
 	public ResponseEntity<JsonResult> readCard() {
 		return ResponseEntity
